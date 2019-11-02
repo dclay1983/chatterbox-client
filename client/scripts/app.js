@@ -29,7 +29,7 @@ var App = {
   // New:
   fetch: function() {
     Parse.readAll(Parse.filterInput(data));
-  };
+  },
 
   startSpinner: function() {
     App.$spinner.show();
