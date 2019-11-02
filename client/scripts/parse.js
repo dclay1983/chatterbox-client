@@ -16,7 +16,7 @@ var Parse = {
         console.log('chatterbox: Message sent');
       },
       error: errorCB || function(error) {
-        console.error('chatterbox: Failed to fetch messages', error);
+        console.error('chatterbox: Failed to post message', error);
       }
     });
   },
