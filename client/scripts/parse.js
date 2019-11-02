@@ -33,11 +33,4 @@ var Parse = {
       }
     });
   },
-
-  filterInput: function(data) {
-    // examine the response from the server request:
-    // For now, just print it to console
-    // Later we will use underbar templating (maybe?) to filter out any potentially bad stuff
-    console.log(data);
-  }
 };

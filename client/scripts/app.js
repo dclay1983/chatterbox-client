@@ -17,18 +17,12 @@ var App = {
 
   },
 
-  // Original:
-  // fetch: function(callback = ()=>{}) {
-  //   Parse.readAll((data) => {
-  //     // examine the response from the server request:
-  //     console.log(data);
-  //     callback();
-  //   });
-  // },
-
-  // New:
-  fetch: function() {
-    Parse.readAll(Parse.filterInput(data));
+  fetch: function(callback = ()=>{}) {
+    Parse.readAll((data) => {
+      Messages = data.results;
+      MessagesView.render();
+      callback();
+    });
   },
 
   startSpinner: function() {
