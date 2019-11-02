@@ -17,14 +17,19 @@ var App = {
 
   },
 
-  fetch: function(callback = ()=>{}) {
-    Parse.readAll((data) => {
-      // examine the response from the server request:
-      console.log(data);
+  // Original:
+  // fetch: function(callback = ()=>{}) {
+  //   Parse.readAll((data) => {
+  //     // examine the response from the server request:
+  //     console.log(data);
+  //     callback();
+  //   });
+  // },
 
-      callback();
-    });
-  },
+  // New:
+  fetch: function() {
+    Parse.readAll(Parse.filterInput(data));
+  };
 
   startSpinner: function() {
     App.$spinner.show();
