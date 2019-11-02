@@ -3,6 +3,7 @@
 // Parse will tell Rooms which rooms were deleted or added (since last query)
 // Rooms will respond to queries from Parse for new rooms (since last query)
 var Rooms = {
-
+  // Hard-code for now.
+  // Later, it will call Parse to query the server and retrieve this dynamically:
 
 };
